@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @using Nazirandco.Models;
+<title>Nazir and comapnay (PVT) Limited| Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Tillage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstarp-css -->
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstarp-css -->
+<!-- css -->
+<link rel="stylesheet" href="~/Content/css/style.css" type="text/css" media="all" />
+<!--// css -->
+<script src="~/Content/js/jquery-1.11.1.min.js"></script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600' rel='stylesheet' type='text/css'>
+<!--/fonts-->
+<link href="~/Content/css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="~/Content/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+    <!-- banner -->
+	<div class="banner a-banner">
+		<!-- container -->
+		<div class="container">
+			<div class="header">
+				<div class="head-logo">
+					<a href="~/Home/index"><img src="~/Content/images/logo1.png" alt="" /></a>
+				</div>
+				<div class="top-nav">
+					<span class="menu"><img src="~/Content/images/menu.png" alt=""></span>
+					<ul class="nav1">
+						<li class="hvr-sweep-to-bottom active"><a href="~/Home/index">Home<i></i></a></li>
+						<li class="hvr-sweep-to-bottom "><a href="~/Home/about">About<i></i></a></li>
+						<li class="hvr-sweep-to-bottom"><a href="~/User/Products">Products<i></i></a></li>
+						<li class="hvr-sweep-to-bottom"><a href="~/Home/signin">Signin<i></i></a></li>
+                        <li class="hvr-sweep-to-bottom"><a href="~/User/mail">Mail Us<i></i></a></li>
+						<div class="clearfix"> </div>
+					</ul>
+					<!-- script-for-menu -->
+							 <script>
+							     $("span.menu").click(function () {
+							         $("ul.nav1").slideToggle(300, function () {
+							             // Animation complete.
+							         });
+							     });
+							</script>
+						<!-- /script-for-menu -->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //banner -->
+</head>
+<body>
+    @RenderBody()
+    <!-- footer -->
+	<div class="footer">
+		<!-- container -->
+		<div class="container">
+			<div class="col-md-6 footer-left  wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<ul>
+					<li><a href="~/Home/index">Home</a></li>
+					<li><a href="~/Home/about">About</a></li>
+					<li><a href="~/User/products">Products</a></li>
+					<li><a href="~/User/mail">Mail Us</a></li>
+					<li><a href="~/Home/signin">Signin</a></li>
+				</ul>
+				
+			</div>
+			<div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<h3>Address</h3>
+				<div class="address">
+					<p>Ghalla Mandi Ghotki,
+						<span>Main Road, Shop #30.</span>
+					</p>
+				</div>
+				<div class="phone">
+					<p>092-03133265365</p>
+				</div>
+			</div>
+			<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				
+				<p></p>
+			</div>
+			<div class="clearfix"> </div>	
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //footer -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

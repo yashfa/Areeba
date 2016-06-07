@@ -1,0 +1,143 @@
+﻿@{
+    ViewBag.Title = "Pesticides";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Nazirandco.Models.product>
+<!DOCTYPE html>
+<html>
+
+<body>
+	
+	<!-- products-top -->
+	<div class="products-top">
+		<!-- container -->
+		<div class="container">
+			<h3 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">Pesticides</h3>
+			<h5 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">We Provide you best quality products.<span>Grow your crops with best products.</span></h5>
+			<div class="products-top-grids wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				 <table class="table">
+            
+            <tr style="background-color:#f2dede;">
+                <td style="text-align:center; color:#a94442"><b>Item ID</b></td>
+                <td style="text-align:center; color:#a94442"><b>Item Name</b></td>
+                <td style="text-align:center; color:#a94442"><b>Item Price</b></td>
+                <td style="text-align:center; color:#a94442"><b>Total Amount</b></td>
+                 <td style="text-align:center; color:#a94442"><b>Stock</b></td>
+                   <td style="text-align:center; color:#a94442"><b>Type</b></td>
+              
+                <td style="text-align:center; color:#a94442"><b></b></td>
+                
+
+            </tr>
+
+            @foreach (var p in Model)
+            {
+               if(p.type=="Pesticide ")
+               {
+                    <tr>
+                        <td style="text-align:center">@p.item_id</td>
+                        <td style="text-align:center">@p.name</td>
+                        <td style="text-align:center">@p.price</td>
+                         <td style="text-align:center">@p.amount</td>
+                         <td style="text-align:center">@p.stock</td>
+                        <td style="text-align:center">@p.type</td>
+                      
+                         <td style="text-align:center">
+                         <form action="../addToMycart/@p.item_id" onsubmit="return agree()">
+                                <input type="submit" value="Add to cart" style="border:none; border-radius:3px; color:white;font-weight:600" class="btn-warning"/>
+                            </form>
+                           
+                    </tr>
+                }
+                
+              
+            }    
+           
+        </table>
+			</div>
+		</div>
+		<!-- container -->
+ 	</div>
+	<!-- //products-top -->
+	<!-- products-bottom -->
+	<div class="products-bottom">
+		<!-- container -->
+		<div class="container">
+			<h3 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">Recent Products</h3>
+			<div class="products-bottom-grids">
+				<div class="gallery-grids">
+					<div class="gallery-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						 <a class="fancybox" href="~/Content/images/6-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/6.jpg" class="img-style row6" alt=""><span> </span></a>					
+					</div>
+					<div class="gallery-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content/images/8-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/8.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="gallery-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content/images/5-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/5.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="gallery-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content/images/9-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/9.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="gallery-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content/images/10-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/10.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="gallery-grids">
+					<div class="gallery-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						 <a class="fancybox" href="~/Content/images/6-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/6.jpg" class="img-style row6" alt=""><span> </span></a>					
+					</div>
+					<div class="gallery-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content/images/5-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/5.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="gallery-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content//8-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/8.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="gallery-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content//10-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/10.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="gallery-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<a class="fancybox" href="~/Content//9-.jpg" data-fancybox-group="gallery"><img src="~/Content/images/9.jpg" class="img-style row6" alt=""><span> </span></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- products-bottom -->
+	
+	<div class="copyright">
+		<!-- container -->
+		<div class="container">
+			<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<p> Copyrights © 2016 <a href="http://www.nazirandco.org/areeba/"> Areeba Ilyas </a>
+			</div>
+			<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<ul>
+					<li><a href="#" class="twitter"> </a></li>
+					<li><a href="#" class="twitter facebook"> </a></li>
+					<li><a href="#" class="twitter chrome"> </a></li>
+					<li><a href="#" class="twitter pinterest"> </a></li>
+					<li><a href="#" class="twitter linkedin"> </a></li>
+					<li><a href="#" class="twitter dribbble"> </a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
+<script>
+
+    function agree() {
+        var x = confirm("Are you sure?");
+        if (x == true)
+            return true;
+        else
+            return false;
+    }
+</script>
+
